@@ -95,7 +95,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
                 365% APY
               </div>
             </div>
-            <button className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
+            <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
               Buy PEPU on Uniswap
             </button>
 
