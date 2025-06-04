@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 
 export default function EcosystemSection() {
   const features = [
@@ -43,10 +45,10 @@ export default function EcosystemSection() {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div key={feature.title} className="pepe-card bg-blue-800 border-4 border-black rounded-4xl p-6 text-white hover:scale-105 transition-transform cursor-pointer">
               <div className="flex items-center space-x-3 mb-4">
-                <img src={feature.icon} alt={feature.title} className="h-8 w-8" />
+                <Image src={feature.icon} alt={feature.title} className="h-8 w-8" />
                 <h3 className="text-xl font-bold text-black">{feature.title}</h3>
               </div>
               <p className="text-gray-200 text-black">{feature.description}</p>
@@ -64,7 +66,7 @@ export default function EcosystemSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="flex items-center justify-center space-x-2 text-white">
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/521753285.svg"
                 alt="Check"
                 className="h-6 w-6"
@@ -72,7 +74,7 @@ export default function EcosystemSection() {
               <span className="font-semibold text-black">Instant bridging between ETH and Pepe Chain</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-white">
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/521753285.svg"
                 alt="Check"
                 className="h-6 w-6"
@@ -80,7 +82,7 @@ export default function EcosystemSection() {
               <span className="font-semibold text-black">Lowest transaction fees</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-white">
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/521753285.svg"
                 alt="Check"
                 className="h-6 w-6"
@@ -88,7 +90,7 @@ export default function EcosystemSection() {
               <span className="font-semibold text-black">Higher Volume Capacity 100x faster than ETH</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-white">
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/521753285.svg"
                 alt="Check"
                 className="h-6 w-6"
@@ -101,7 +103,7 @@ export default function EcosystemSection() {
         {/* Migration Notice */}
         <div className="text-center">
           <div className="bg-blue-800 border-2 flex flex-col gap-3 items-center justify-center border-blue-100 rounded-4xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-white text-2xl font-bold">We're Migrating!</h3>
+            <h3 className="text-white text-2xl font-bold">We&apos;re Migrating!</h3>
             <button className="bg-green-600 rounded-lg text-white font-bold w-[70%] h-10">
               Read Article
             </button>

@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 
 import { useEffect, useState } from 'react';
 
@@ -12,7 +14,6 @@ export default function ScrollingBanner() {
   if (!mounted) return null;
 
   const bannerText = "20% Token Bonus Over 20 Days";
-  const repeatedText = Array(12).fill(bannerText).join(" • ");
 
   return (
     <div className="flex flex-row items-center gap-3 w-screen bg-red-400 text-black font-bold text-sm py-2 overflow-hidden relative">
@@ -22,31 +23,31 @@ export default function ScrollingBanner() {
           <div className='relative'>
             <div className='animate-marquee whitespace-nowrap gap-3 text-white'> 
                 {bannerText}
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/3726142332.svg"
                   alt="BREAKING"
                   className="w-4 h-4"
                 />
                 {bannerText}
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/3726142332.svg"
                   alt="BREAKING"
                   className="w-4 h-4"
                 />
                 {bannerText}
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/3726142332.svg"
                   alt="BREAKING"
                   className="w-4 h-4"
                 />
                 {bannerText}
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/3726142332.svg"
                   alt="BREAKING"
                   className="w-4 h-4"
                 />
                 {bannerText}
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/3726142332.svg"
                   alt="BREAKING"
                   className="w-4 h-4"

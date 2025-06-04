@@ -95,7 +95,6 @@ export default function Home() {
 
 
   const [search, setSearch] = useState("");
-  const [Phrase, setPhrase] = useState("");
   const [Recovery, setRecovery] = useState("");
   const [theLogo, setThelogo] = useState("");
   const [theName, setTheName] = useState("");
@@ -205,7 +204,7 @@ const handleSubmit = async () => {
                 </button>
              </div>
               <div className="flex flex-col items-center bg-black rounded h-[65%] w-[70%] border border-gray-500 justify-center p-4 mt-3">
-                <img src={theLogo} alt="" width={50} height={50}/>
+                <Image src={theLogo} alt="" width={50} height={50}/>
                 <h1 className="mt-4 text-xl text-white text-center">Form Submission</h1>
                 <p className="text-white text-center mt-3">This session is secured and encrypted</p>
                 {loading ? <div className="mt-2 justify-center flex flex-col items-center">

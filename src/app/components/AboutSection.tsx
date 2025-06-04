@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 
 export default function AboutSection() {
   return (
@@ -6,7 +8,7 @@ export default function AboutSection() {
         {/* Hero Story */}
         <div className="text-center">
           <div className="flex justify-center gap-2">
-            <img
+            <Image
               src="https://ext.same-assets.com/1127042955/1550868957.gif"
               alt="Pepe Hero Animation"
               className="h-90 w-40"
@@ -30,7 +32,7 @@ export default function AboutSection() {
               </div>
               <div className="">
                 <p>
-                  $PEPU token powers the entire ecosystem. You're early enough to witness a new golden age of Meme Coins.
+                  $PEPU token powers the entire ecosystem. You&apos;re early enough to witness a new golden age of Meme Coins.
                   With Pepe in his rightful place as King, and the <span className="font-bold">Pepe Unchained Layer 2</span> — his Kingdom.
                 </p>
               </div>
@@ -41,7 +43,7 @@ export default function AboutSection() {
             <h3 className="text-3xl font-bold text-black text-center">Layer 2 Ecosystem</h3>
             <div className="flex justify-between items-center w-full mt-5">
             <p className="text-black text-sm h-15 w-auto rounded-tl-2xl rounded-br-2xl flex items-center justify-center bg-yellow-500 border-2 border-black p-3">He devised a Giga Brain Plan</p>
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/3443036877.gif"
                 alt="Giga Brain Animation"
                 className="h-80 w-50"
@@ -56,7 +58,7 @@ export default function AboutSection() {
             <h2 className="text-3xl font-bold text-black mb-4">Pepe Unchained</h2>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <p className="text-black text-lg">
-                Your gateway to Pepe's decentralized world. Explore trading, bridging, staking, and more with ease.
+                Your gateway to Pepe&apos;s decentralized world. Explore trading, bridging, staking, and more with ease.
                 Join the community to stay up to date on all new features.
               </p>
             </div>
@@ -70,7 +72,7 @@ export default function AboutSection() {
               { title: "Staking", description: "Put your tokens to work and grow your assets through staking." },
               { title: "Dev Grant", description: "Join the revolution! Sign up to build on Pepe Unchained." },
               { title: "More to Come...", description: "New features launching soon! Stay tuned and be part of the journey." }
-            ].map((feature, index) => (
+            ].map((feature) => (
               <div key={feature.title} className="bg-blue-800 border-2 border-blue-100 rounded-4xl p-6 text-white text-center">
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
                 <p className="">{feature.description}</p>
@@ -80,12 +82,12 @@ export default function AboutSection() {
 
           <div className="text-center">
             <div className="flex flex-col items-center justify-center">
-              <img
+              <Image
                 src="https://ext.same-assets.com/1127042955/2995025178.png"
                 alt="Social"
                 className="h-40 w-50"
               />
-                <img
+                <Image
                   src="https://ext.same-assets.com/1127042955/2888647494.svg"
                   alt="Icon"
                   className="h-40 w-50 -mt-[30px]"

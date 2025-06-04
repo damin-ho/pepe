@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+
 
 import { useEffect, useState } from 'react';
 
@@ -7,22 +9,6 @@ type HeaderProps = {
 };
 
 export default function HeroSection({ toGo }: HeaderProps) {
-
-    const features = [
-    {
-      title: "Migrate",
-      description: "Swap tokens on our lightning-fast decentralized exchange.",
-      icon: "https://ext.same-assets.com/1127042955/869474849.svg"
-    },
-    {
-      title: "Withdraw",
-      description: "Move between chains with Pepes secure bridge solution.",
-      icon: "https://ext.same-assets.com/1127042955/869474849.svg"
-    },
-   
-  ];
-
-
 
 
   const [timeLeft, setTimeLeft] = useState({
@@ -116,12 +102,12 @@ export default function HeroSection({ toGo }: HeaderProps) {
         <div className="mt-3">
           <h3 className="text-white text-lg font-bold text-center">Centralized Exchanges</h3>
           <div className="flex flex-row justify-center items-center flex-wrap w-[100%]">
-            <img src="https://ext.same-assets.com/1127042955/734495747.png" alt="BingX" className="h-10" />
-            <img src="https://ext.same-assets.com/1127042955/1300307655.png" alt="MEXC" className="h-10" />
-            <img src="https://ext.same-assets.com/1127042955/3266785014.png" alt="BitMart" className="h-10" />
-            <img src="https://ext.same-assets.com/1127042955/1042982176.png" alt="LBank" className="h-10" />
-            <img src="https://ext.same-assets.com/1127042955/1349740309.png" alt="Upcoming" className="h-10" />
-            <img src="https://ext.same-assets.com/1127042955/2350468744.png" alt="Upcoming" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/734495747.png" alt="BingX" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/1300307655.png" alt="MEXC" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/3266785014.png" alt="BitMart" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/1042982176.png" alt="LBank" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/1349740309.png" alt="Upcoming" className="h-10" />
+            <Image src="https://ext.same-assets.com/1127042955/2350468744.png" alt="Upcoming" className="h-10" />
           </div>
         </div>
 
@@ -130,7 +116,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-10">
             <div className="bg-blue-800 border-4 border-black rounded-4xl p-6 text-white hover:scale-105 transition-transform cursor-pointer">
               <div className="flex items-center space-x-3 mb-4">
-                <img src="https://ext.same-assets.com/1127042955/869474849.svg" alt="" className="h-8 w-8" />
+                <Image src="https://ext.same-assets.com/1127042955/869474849.svg" alt="" className="h-8 w-8" />
                 <h3 className="text-xl font-bold text-white">Migrate</h3>
               </div>
               <div className='flex flex-col items-center justify-center'>
@@ -143,7 +129,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
 
             <div className="pepe-card bg-blue-800 border-4 border-black rounded-4xl p-6 text-white hover:scale-105 transition-transform cursor-pointer">
               <div className="flex items-center space-x-3 mb-4">
-                <img src="https://ext.same-assets.com/1127042955/869474849.svg" alt="" className="h-8 w-8" />
+                <Image src="https://ext.same-assets.com/1127042955/869474849.svg" alt="" className="h-8 w-8" />
                 <h3 className="text-xl font-bold text-white">Withdraw</h3>
               </div>
               <div className='flex flex-col items-center justify-center'>
