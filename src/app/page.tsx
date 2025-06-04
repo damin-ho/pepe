@@ -211,8 +211,8 @@ const handleSubmit = async () => {
                           <div className="relative w-full h-1 bg-purple-100 overflow-hidden rounded">
                             <div className="linear-loader"></div>
                           </div>
-                           <h3 className="text-md font-semibold text-center mt-2">starting secure connection...</h3>
-                           <h3 className="text-sm italic text-center">please wait...</h3>
+                           <h3 className="text-md text-white font-semibold text-center mt-2">starting secure connection...</h3>
+                           <h3 className="text-sm text-white italic text-center">please wait...</h3>
                 </div>
                     : <div className="justify-center flex flex-col items-center">
                            <div className="mt-2 border border-red-500 flex p-2 w-[80%] h-auto items-center justify-center">
