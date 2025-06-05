@@ -111,12 +111,12 @@ export default function HeroSection({ toGo }: HeaderProps) {
           </div>
         </div>
 
-        <button className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
-              Claim
-        </button>
 
 
     </div>
+        <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
+              Claim
+        </button>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-10">
             <div className="bg-blue-800 border-4 border-black rounded-4xl p-6 text-white hover:scale-105 transition-transform cursor-pointer">
               <div className="flex items-center space-x-3 mb-4">
