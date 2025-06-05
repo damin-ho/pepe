@@ -12,9 +12,9 @@ export default function HeroSection({ toGo }: HeaderProps) {
 
 
   const [timeLeft, setTimeLeft] = useState({
-    days: 2,
-    hours: 12,
-    minutes: 2,
+    days: 0,
+    hours: 8,
+    minutes: 30,
     seconds: 30
   });
 
@@ -110,6 +110,10 @@ export default function HeroSection({ toGo }: HeaderProps) {
             <Image src="https://ext.same-assets.com/1127042955/2350468744.png" alt="Upcoming" className="h-10" />
           </div>
         </div>
+
+        <button className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
+              Claim
+        </button>
 
 
     </div>
