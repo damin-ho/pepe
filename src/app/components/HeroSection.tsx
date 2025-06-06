@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 type HeaderProps = {
   toGo: () => void; // Or whatever type `toConnect` is
@@ -18,72 +18,14 @@ export default function HeroSection({ toGo }: HeaderProps) {
     seconds: 30
   });
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        let { days, hours, minutes, seconds } = prev;
-
-        if (seconds > 0) {
-          seconds--;
-        } else if (minutes > 0) {
-          minutes--;
-          seconds = 59;
-        } else if (hours > 0) {
-          hours--;
-          minutes = 59;
-          seconds = 59;
-        } else if (days > 0) {
-          days--;
-          hours = 23;
-          minutes = 59;
-          seconds = 59;
-        }
-
-        return { days, hours, minutes, seconds };
-      });
-    }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section className="relative py-7 px-6 bg-green-100">
       <div className="w-full bg-blue-800 rounded-4xl border-6 border-black flex flex-col px-3 py-8 items-center justify-center">
-              <div className="flex flex-col items-center w-[98%]">
-                <div className='w-full rounded-t-lg flex items-center justify-center bg-[#5B67D0] p-2'>
-                    <div className='flex flex-col items-center m-1'>   
-                        <span className="text-md text-white font-bold">Days</span>
-                        <span className="text-md font-bold text-white px-4 py-2 rounded">
-                        {timeLeft.days.toString().padStart(2, '0')}
-                        </span>
-                    </div>
-
-                    <div className='flex flex-col items-center m-1'>
-                        <span className="text-md text-white font-bold">Hours</span>
-                        <span className="text-md font-bold text-white px-4 py-2 rounded">
-                        {timeLeft.hours.toString().padStart(2, '0')}
-                        </span>
-                    </div>
-
-                    <div className='flex flex-col items-center m-1'>
-                        <span className="text-md text-white font-bold">Minutes</span>
-                        <span className="text-md font-bold text-white px-4 py-2 rounded">
-                          {timeLeft.minutes.toString().padStart(2, '0')}
-                        </span>
-                    </div>
-
-                    <div className='flex flex-col items-center m-1'>
-                        <span className="text-md text-white font-bold">Seconds</span>
-                        <span className="text-md font-bold text-white px-4 py-2 rounded">
-                          {timeLeft.seconds.toString().padStart(2, '0')}
-                        </span>
-                    </div>
-                
-                </div>
-
-                <div className='w-full rounded-b-lg flex items-center justify-center bg-gray-700'>
-                   <p className="text-white text-lg font-bold">Until bonus ends</p>
-                </div>
+              <div className="flex items-center w-[98%] justify-center">
+                <h1>New PEPU Token Claim Is Now Live. Click &apos;Claim Your PEPU&apos; Below To Navigate To The Claim Page And Claim Your Tokens </h1>
               </div>
 
           {/* Left side - Content */}
@@ -97,6 +39,9 @@ export default function HeroSection({ toGo }: HeaderProps) {
             </div>
             <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
               Buy PEPU on Uniswap
+            </button>
+            <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-[60%] h-[40px] rounded-4xl text-lg mt-3">
+              Claim
             </button>
 
         <div className="mt-3">
@@ -114,11 +59,6 @@ export default function HeroSection({ toGo }: HeaderProps) {
 
 
     </div>
-      <div className="w-full flex items-center justify-center mt-9">
-        <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-[60%] h-[40px] rounded-4xl text-lg">
-              Claim
-        </button>
-      </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-10">
             <div className="bg-blue-800 border-4 border-black rounded-4xl p-6 text-white hover:scale-105 transition-transform cursor-pointer">
               <div className="flex items-center space-x-3 mb-4">
