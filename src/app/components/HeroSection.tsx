@@ -10,17 +10,6 @@ type HeaderProps = {
 
 export default function HeroSection({ toGo }: HeaderProps) {
 
-
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 8,
-    minutes: 30,
-    seconds: 30
-  });
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative py-7 px-6 bg-green-100">
       <div className="w-full bg-blue-800 rounded-4xl border-6 border-black flex flex-col px-3 py-8 items-center justify-center">
@@ -41,7 +30,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
               Buy PEPU on Uniswap
             </button>
             <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-[60%] h-[40px] rounded-4xl text-lg mt-3">
-              Claim
+              Claim Your PEPU
             </button>
 
         <div className="mt-3">
