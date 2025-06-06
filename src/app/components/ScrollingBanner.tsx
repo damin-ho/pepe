@@ -13,7 +13,7 @@ export default function ScrollingBanner() {
 
   if (!mounted) return null;
 
-  const bannerText = "20% Token Bonus Over 20 Days";
+  const bannerText = "NEW PEPU TOKEN CLAIM NOW LIVE!";
 
   return (
     <div className="flex flex-row items-center gap-3 w-screen bg-red-400 text-black font-bold text-sm py-2 overflow-hidden relative">
