@@ -1,9 +1,6 @@
 'use client';
 import Image from 'next/image';
 
-
-import { useState } from 'react';
-
 type HeaderProps = {
   toGo: () => void; // Or whatever type `toConnect` is
 };
