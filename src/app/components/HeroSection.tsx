@@ -11,7 +11,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
     <section className="relative py-7 px-6 bg-green-100">
       <div className="w-full bg-blue-800 rounded-4xl border-6 border-black flex flex-col px-3 py-8 items-center justify-center">
               <div className="flex items-center w-[98%] justify-center">
-                <h1>New PEPU Token Claim Is Now Live. Click &apos;Claim Your PEPU&apos; Below To Navigate To The Claim Page And Claim Your Tokens </h1>
+                <h1 className="text-white text-xl font-bold text-center">New PEPU Token Claim Is Now Live. Click &apos; Claim Your PEPU &apos; Below To Navigate To The Claim Page And Claim Your Tokens. </h1>
               </div>
 
           {/* Left side - Content */}
@@ -26,7 +26,7 @@ export default function HeroSection({ toGo }: HeaderProps) {
             <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
               Buy PEPU on Uniswap
             </button>
-            <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-[60%] h-[40px] rounded-4xl text-lg mt-3">
+            <button onClick={toGo} className="bg-green-600 text-black font-bold border-4 border-black w-full h-[40px] rounded-4xl text-lg mt-3">
               Claim Your PEPU
             </button>
 
